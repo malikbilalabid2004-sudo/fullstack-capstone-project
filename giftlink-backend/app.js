@@ -1,0 +1,10 @@
+const express = require('express');
+const app = express();
+const giftRoutes = require('./routes/giftRoutes');
+const searchRoutes = require('./routes/searchRoutes');
+const authRoutes = require('./routes/authRoutes');
+app.use(express.json());
+app.use('/api/gifts', giftRoutes);
+app.use('/api/search', searchRoutes);
+app.use('/api/auth', authRoutes);
+module.exports = app;
